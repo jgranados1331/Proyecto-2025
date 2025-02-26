@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import viewsets
 from .models import chicaMagica
-from .serializer import ChicaMagicaSerializer
+from .serializer import ChicaMagicaSerializer, ChicaMagicaReadSerializer
 from rest_framework import permissions
 
 
@@ -18,7 +18,7 @@ class DetalleChicaView(APIView):
         print(f"Buscando chica con slug: {slug}")  # Mensaje de depuración
         chica = get_object_or_404(chicaMagica, slug=slug)
         print(f"Chica encontrada: {chica}")  # Mensaje de depuración
-        serializer = ChicaMagicaSerializer(chica)
+        serializer = ChicaMagicaReadSerializer(chica)
         return Response(serializer.data)
     
     def put(self, request, slug):

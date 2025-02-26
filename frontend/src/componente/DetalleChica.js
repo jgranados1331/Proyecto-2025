@@ -39,6 +39,9 @@ function DetalleChica() {
   return (
     <div class='container-pri'>
       <div class='container-titulo'>
+        <a href='/'>
+        <button class='atras' src="/">Atras</button>
+        </a>
         <h1>{chica.nombre} {chica.apellido}</h1>
       </div>
       <div class='container-muneca'>

@@ -16,6 +16,15 @@ class EstadoSerializer(serializers.ModelSerializer):
 class ChicaMagicaSerializer(serializers.ModelSerializer):
     id_ciudad = serializers.PrimaryKeyRelatedField(queryset=ciudad.objects.all())
     id_estado_actual = serializers.PrimaryKeyRelatedField(queryset=estadoActual.objects.all())
+
+    class Meta:
+        model = chicaMagica
+        fields = '__all__'
+
+class ChicaMagicaReadSerializer(serializers.ModelSerializer):
+    id_ciudad = CiudadSerializer(read_only=True)
+    id_estado_actual = EstadoSerializer(read_only=True)
+
     class Meta:
         model = chicaMagica
         fields = '__all__'

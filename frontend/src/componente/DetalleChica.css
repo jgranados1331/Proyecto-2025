@@ -97,13 +97,14 @@ html, body{
 .container-img{
     display: flex;
     justify-content: center;
+    align-items:center;
     -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .container-img img{
-    width: 360px;
-    height: auto;
+    width: 370px;
+    height: 380px;
     border-radius: 70%;
     border: 5px solid rgb(59, 59, 59);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -150,6 +151,22 @@ html, body{
 }
 
 .container-bottons .Editar:hover{
+    background-color: rgb(147, 255, 174);
+    color:rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+.atras{
+    padding:10px;
+    font-family: 'Playwrite IT Moderna';
+    border-radius: 15px;
+    border: none;
+    margin: 10px;
+    font-size: 18px;
+    transition: .4s;
+}
+
+.atras:hover{
     background-color: rgb(147, 255, 174);
     color:rgb(172, 172, 172);
     cursor: pointer;
